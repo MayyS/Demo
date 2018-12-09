@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <include file="edu/action/conf/abstract/abstract.xml"/>
+    <package name="interacted" namespace="/" extends="struts-default,abstract">
+        <action name="interacted_*" class="edu.action.interactedAction" method="{1}">
+            <result name="{1}">/jsp/admin/movie/{1}.jsp</result>
+            <result name="cart">/jsp/interacted/cart.jsp</result>
+            <result name="success">/jsp/status/paidSuccess.jsp</result>
+        </action>
+    </package>
+</struts>

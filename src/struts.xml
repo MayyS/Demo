@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <constant name="struts.custom.i18n.resources" value="resource"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.configuration.xml.reload" value="true"/>
+    <constant name="struts.serve.static.browserCache" value="false"/>
+    
+    <include file="edu/action/conf/home.xml"/>
+    <include file="edu/action/conf/user.xml"/>
+    <include file="edu/action/conf/movie.xml"/>
+    <include file="edu/action/conf/logio.xml"/>
+    <include file="edu/action/conf/interacted.xml"/>
+    <include file="edu/action/conf/fileupload.xml"/>
+    <include file="edu/business/bookstore/conf/book.xml"/>
+    <include file="edu/action/conf/validate.xml"/>
+</struts>

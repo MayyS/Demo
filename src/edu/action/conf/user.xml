@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <include file="edu/action/conf/abstract/abstract.xml"/>
+    <package name="user" namespace="/" extends="struts-default,abstract">
+        <action name="user_*" class="edu.action.UserAction" method="{1}">
+            <result name="{1}">/jsp/font/myIndex.jsp</result>
+            <result name="success">/jsp/font/myIndex.jsp</result>
+            <result name="login">/jsp/font/userLog.jsp</result>
+            <result name="input">/jsp/admin/home/registerPage.jsp</result>
+            <result name="registerSuccess">jsp/status/registerSuccess.jsp</result>
+            <result name="myOders">/jsp/admin/user/myOders.jsp</result>
+            <result name="changeSuccess">/jsp/status/changeSuccess.jsp</result>
+            <interceptor-ref name="mystack">
+                <param name="privilege.excludeMethods">checkIn,register,myOders,changePwd</param>
+            </interceptor-ref>
+
+        </action>
+    </package>
+</struts>
